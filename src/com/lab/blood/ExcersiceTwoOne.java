@@ -1,14 +1,18 @@
 package com.lab.blood;
 
+import java.util.Scanner;
+
 /**
  * Created by User on 022 22.11.17.
  */
 public class ExcersiceTwoOne {
     public static void main(String[] args) {
-        String text = "Мама мыла раму и  ало запачкала платье.";
+        System.out.println("Введите исходный текст");
+        Scanner sc = new Scanner(System.in);
+        String text = sc.nextLine();
         int i = 4;
         char symbolForReplace = '_';
-        System.out.printf("Строка: %s%s%sРезультат: %s", text, System.lineSeparator(), replaceSymbol(text, i, symbolForReplace));
+        System.out.printf("Строка: %s%sРезультат: %s", text, System.lineSeparator(), replaceSymbol(text, i, symbolForReplace));
     }
 
     public static String replaceSymbol(String offer, int index, char symbol) {
