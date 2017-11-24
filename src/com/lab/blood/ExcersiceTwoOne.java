@@ -9,13 +9,15 @@ public class ExcersiceTwoOne {
     public static void main(String[] args) {
         System.out.println("Введите исходный текст");
         Scanner sc = new Scanner(System.in);
+        System.out.println("Введите символ для замены");
         String text = sc.nextLine();
-        int i = 4;
-        char symbolForReplace = '_';
-        System.out.printf("Строка: %s%sРезультат: %s", text, System.lineSeparator(), replaceSymbol(text, i, symbolForReplace));
+        int countOfStep = 4;
+        Scanner scChar = new Scanner(System.in);
+        String symbolForReplace = scChar.nextLine();
+        System.out.printf("Строка: %s%sРезультат: %s", text, System.lineSeparator(), replaceSymbol(text, countOfStep, symbolForReplace));
     }
 
-    public static String replaceSymbol(String offer, int index, char symbol) {
+    public static String replaceSymbol(String offer, int index, String symbol) {
         StringBuilder sb = new StringBuilder();
         if (offer != null && offer.length() > 0 && index > 0) {
             for (String word : offer.split(" ")) {
